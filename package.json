@@ -4,12 +4,12 @@
   "description": "back-end quiz",
   "main": "server.js",
   "directories": {
-    "lib": "lib",
+    "lib": "lib",n
     "test": "tests"
   },
   "scripts": {
-    "test": "'mocha tests --recursive -w'",
-    "start": "node server.js"
+    "test": "mocha tests",
+    "start": "npm test -- -w"
   },
   "repository": {
     "type": "git",
