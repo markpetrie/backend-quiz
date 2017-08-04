@@ -4,12 +4,17 @@
   "description": "back-end quiz",
   "main": "server.js",
   "directories": {
-    "lib": "lib",n
+    "lib": "lib",
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha tests",
-    "start": "npm test -- -w"
+    "test": "nodemon --exec 'mocha tests --recursive -w'",
+    "dev": "node --exec 'npm run test -- -w' ",
+    "test:unit": "mocha tests/unit",
+    "dev:unit": "node --exec 'npm run test/unit'",
+    "test:e2e": "mocha tests/e2e",
+    "dev:e2d": "node --exec 'npm run test/e2e'",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -30,7 +35,6 @@
     "chai": "^4.1.0",
     "chai-http": "^3.0.0",
     "eslint": "^4.3.0",
-    "mocha": "^3.4.2",
-    "nodemon": "^1.11.0"
+    "mocha": "^3.4.2"
   }
 }
